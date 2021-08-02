@@ -1,0 +1,180 @@
+.main-home-content {
+  padding: 10rem 0;
+}
+
+section.about-app {
+  .section-hero-title {
+    h2 {
+      padding: 1rem 0;
+      @include mq("phablet") {
+        font-size: 5rem;
+      }
+    }
+  }
+  .section-hero-content {
+    flex-direction: row-reverse;
+
+    @include mq("ipad") {
+      display: block;
+    }
+    padding-top: 2rem;
+    &-img-box {
+      background: radial-gradient(
+        circle at 21% 37%,
+        rgba(green, 0.04) 10%,
+        rgba(yellow, 0.04) 18%,
+        rgba(red, 0.04) 20%,
+        #fff 25%
+      );
+    }
+    &-description {
+      @include mq("ipad") {
+        margin-top: -10rem;
+      }
+      @include mq("phablet") {
+        margin-top: -5rem;
+      }
+      background: radial-gradient(
+        circle at 90% 60%,
+        rgba(green, 0.04) 15%,
+        rgba(yellow, 0.04) 23%,
+        rgba(red, 0.04) 27%,
+        #fff 30%
+      );
+    }
+  }
+}
+// WHY SUBLAAYS
+section.why-subolaays {
+  background-color: $secondary;
+
+  .title {
+    background-color: $white;
+  }
+  .content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+
+    @include mq("ipad") {
+      display: block;
+      background-image: linear-gradient(rgba($secondary, 0.9)),
+        url("../../../images/why-sublaays.png");
+      border-radius: 5rem;
+    }
+
+    @include mq("phablet") {
+      padding: 3rem 0;
+    }
+
+    &-img-box {
+      flex: 0 0 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 2rem;
+
+      @include mq("ipad") {
+        justify-content: center;
+      }
+
+      img {
+        width: 25.5rem;
+        height: 25.5em;
+      }
+    }
+
+    .content-text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 2rem;
+      align-items: center;
+
+      @include mq("ipad") {
+        align-items: center;
+
+        & > * {
+          text-align: center;
+        }
+      }
+
+      h2 {
+        line-height: 1.63;
+        color: $white;
+      }
+      p {
+        font-weight: normal;
+        line-height: 2.17;
+        color: $white;
+      }
+    }
+  }
+}
+
+// COVERAGE AREAS
+section.coverage-areas {
+  padding-top: 20px;
+  .container {
+  }
+
+  .box-img {
+    width: 100%;
+    max-width: 75rem;
+    margin: auto;
+    padding: 8rem 0;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// DOWNLOAD APP
+section.download-app {
+  background-color: $secondary;
+  padding: 2rem 0;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    padding: 3rem 0;
+    & * {
+      color: $white;
+    }
+  }
+  .imgs-box {
+    @extend %flexCenter;
+
+    @include mq("phablet") {
+      flex-direction: column;
+    }
+
+    img.google-play {
+      width: 25rem;
+    }
+    img.app-store {
+      width: 26.5rem;
+    }
+  }
+}
+
+.contact-whatsapp-btn {
+  position: fixed;
+  // top: 50%;
+  left: 3rem;
+  width: 10.5rem;
+  height: 10.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 999;
+  bottom: 50px;
+  img {
+    width: 13rem;
+    height: 13rem;
+  }
+}

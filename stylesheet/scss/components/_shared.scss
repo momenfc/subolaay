@@ -1,0 +1,110 @@
+.root {
+  position: relative;
+}
+// .link{
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height: 1.56;
+//     letter-spacing: -0.48px;
+//     color: #d60812 !important;
+//     text-decoration: underline !important;
+// }
+.loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: #fff;
+  &.show-loader {
+    display: block !important;
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.slick-slider {
+  .slick-dots {
+    bottom: -50px;
+    body.rtl & {
+      direction: ltr;
+    }
+    li {
+      button {
+        background-color: #fff;
+        border: 2px solid $primary;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        transition: background-color ease 0.3s;
+        &::before {
+          content: "";
+        }
+      }
+      &:hover,
+      &.slick-active {
+        button {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.file-input-wrapper {
+  .file-input-holder {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .input-file-label {
+    background-color: $primary;
+    color: #fff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    min-height: 60px !important;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 12px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: capitalize;
+    // @include mq("tablet"){
+    //   height: 40px;
+    //   min-height: 40px !important;
+    //   max-height: 40px;
+    //   width: 110px !important;
+    //   min-width: 110px !important;
+    // }
+  }
+}
+
+.contact-us-modal, .recruitment-modal, .join-merchant-modal {
+  h2 {
+    text-align: center;
+  }
+  p {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  textarea {
+    margin-bottom: 10px !important;
+  }
+}
+
+.message-holder{
+  position: fixed !important;
+  z-index: 555;
+  top: 0;
+  .header{
+    font-size: 32px !important;
+    padding: 16px;
+  }
+}

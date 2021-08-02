@@ -1,0 +1,283 @@
+.ui.form .field input{
+    height: 66px;
+    border-radius: 8px;
+    border: solid 1px #d9d9d9;
+    background-color: #ffffff;
+    cursor: pointer;
+    @include input-placeholder(){
+        font-size: 16px;
+        font-weight: 500;
+        color: #979797;
+    }  
+}
+.ui.default.dropdown:not(.button)>.text, .ui.dropdown:not(.button)>.default.text{
+    font-size: 16px;
+        font-weight: 500;
+        color: #979797;
+}
+.ui.search.selection.dropdown>input.search{
+    cursor: pointer;
+}
+.ui.form .field>.selection.dropdown{
+    height: 66px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.ui.fluid.dropdown>.dropdown.icon{
+    height: 65px;
+    display: flex;
+    align-items: center;
+    left: 16px;
+    right: auto;
+}
+.ui.form .field .prompt.label{
+    width: 100%;
+    text-align: right; 
+}
+
+.ui.radio.checkbox .box:before, .ui.radio.checkbox label:before{
+    width: 19px;
+    height: 19px;
+    border: solid 2px #000000;
+}
+.ui.checkbox input:checked:focus~.box:before, .ui.checkbox input:checked:focus~label:before, .ui.checkbox input:not([type=radio]):indeterminate:focus~.box:before, .ui.checkbox input:not([type=radio]):indeterminate:focus~label:before{
+    border: solid 5px #000000;
+}
+.ui.checkbox input:checked~.box:before, .ui.checkbox input:checked~label:before{
+    border: solid 5px #000000;
+}
+.ui.radio.checkbox input:checked~.box:after, .ui.radio.checkbox input:checked~label:after{
+    display: none;
+}
+
+
+.ui.form {
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      > .input-group{
+        width: 49%;
+        @include mq("tablet"){
+          width: 100%;
+        }
+      }
+      .field {
+        width: 49%;
+        margin-bottom: 15px;
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #000;
+          margin-bottom: 10px;
+        }
+        input,
+        textarea,
+        .selection.dropdown {
+          height: 50px;
+          border-radius: 8px;
+          background-color: #f4f4f4 !important;
+          margin-bottom: 6px;
+          border: 0;
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: normal;
+          .dropdown.icon {
+            top: 25px;
+            padding-top: 5px;
+          }
+          @include input-placeholder(){
+              font-size: 14px;
+              font-weight: 500;
+              color: #cccccc;
+          }
+          .default.text{
+              font-size: 14px;
+              font-weight: 500;
+              color: #cccccc;
+          }
+          @include mq("ipad"){
+            height: 40px;
+          }
+        }
+        textarea{
+            resize: none;
+        }
+      }
+      &.input-group-lg {
+        > .field {
+          &:first-of-type {
+            width: 64%;
+          }
+          &:last-of-type {
+            width: 34%;
+          }
+        }
+      }
+      &.input-group-lg-r {
+        > .field {
+          &:first-of-type {
+            width: 34%;
+          }
+          &:last-of-type {
+            width: 64%;
+          }
+        }
+      }
+      &.input-group-lg-r-4 {
+        width: auto;
+        > .field {
+          &:first-of-type {
+            width: 40%; 
+          }
+          &:last-of-type {
+            width: 58%;
+          }
+        }
+      }
+  
+      &.input-group-grid{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 2%;
+          > .field{
+              width: 100%;
+          }
+          @include mq("tablet"){
+          grid-template-columns: repeat(1, 1fr);
+              .input-group-lg-r-4{
+                  flex-direction: row;
+                  > .field{
+                      width: 48% !important;
+                  }
+              }
+          }
+      }
+      @include mq("tablet") {
+        flex-direction: column;
+        .field {
+          width: 100% !important;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .black-group{
+      label{
+          font-size: 16px !important;
+          color: #000000 !important;
+      }
+      input{
+          @include input-placeholder(){
+              color: #ababab;
+          }
+      }
+  }
+  
+  .date-input-holder{
+      i.icon.calendar{
+          top: -2px !important;
+      }
+  }
+  
+  .ui.selection.active.dropdown .menu{
+      border-color: #f4f4f4 !important;
+  }
+  
+  .ui.form .input-group .field.error .ui.dropdown,
+  .ui.form .input-group .fields.error .field .ui.dropdown,
+  .ui.form .input-group .field.error textarea {
+    border: solid 2px #eb3434 !important;
+  }
+  
+  .order-file-wrapper{
+          > label{
+              opacity: 0;
+              visibility: hidden; 
+          }
+      .order-file-content{
+          label{
+              padding: 35px 50px 35px 50px;
+              border-radius: 12px;
+              border: dashed 2px #cccccc;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 0;
+              height: 210px;
+              cursor: pointer;
+              i{
+                 font-size: 35px;
+                 margin-bottom: 20px; 
+              }
+              p{
+                  font-size: 20px;
+                  font-weight: normal;
+                  color: #ababab;
+                  line-height: 1.35;
+                  text-align: center;
+              }
+              @include mq("tablet"){
+                  height: auto;
+              }
+          }
+          &.active{
+              label{
+                  border-color: $primary;
+                  i{
+                      color: $primary;
+                  }
+                  p{
+                      display: none;
+                      &.file-title{
+                          display: block;
+                      }
+                  }
+              }
+          }
+      }
+  }
+  
+  
+  .ui.form .input-group .field input .dropdown.icon, .ui.form .input-group .field textarea .dropdown.icon, .ui.form .input-group .field .selection.dropdown .dropdown.icon{
+      top: 22px;
+  }
+  .ui.checkbox .box, .ui.checkbox label{
+    cursor: pointer;
+  }
+  
+  
+  .ui.checkbox input[type=checkbox], .ui.checkbox input[type=radio]{
+    height: 17px;
+  }
+  .ui.radio.checkbox .box:before, .ui.radio.checkbox label:before{
+    background-color: transparent !important;
+  }
+  // .passwoed-input-holder{
+      .show-pass, .hide-pass{
+          position: absolute;
+          left: 10px;
+          top: 45px; 
+          cursor: pointer;
+          color: #ababab;
+          @include mq("tablet"){
+            top : 48px
+          }
+      }
+  // }
+
+  .ui.form .field>.selection.dropdown>.dropdown.icon{
+    display: none;
+  }
+  .ui.form .field > .selection.dropdown{
+    font-size: 20px;
+    background-color: #f9f9f9 !important;
+    border: 0 !important;
+  }
+  .ui.dropdown .menu>.item, .ui.search.selection.dropdown > input.search{
+    font-size: 20px;
+  }

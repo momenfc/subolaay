@@ -1,0 +1,26 @@
+@import "helpers/variables",
+  // Sass utilities
+  "helpers/Placeholder",
+  "helpers/loops", "helpers/mixins", "helpers/helpers";
+
+@import "base/reset",
+  // Base stuff
+  "base/typography",
+  "../../packages/slick/slick", "../../packages/slick/slick-theme";
+
+@import "components/buttons",
+  // Components and modules
+  "components/inputs",
+  "components/shared", "components/popup", "components/plugins",
+  "components/slider", "components/cards", "components/form";
+
+@import "layout/header",
+  // Layout related stylesheets
+  "layout/footer";
+
+@import "pages/home",
+  // Page-specific stylesheets
+  "pages/jobs",
+  "pages/join-us", "pages/contact-us", "pages/privacy-terms";
+
+@import "helpers/highest-style"; // highest style

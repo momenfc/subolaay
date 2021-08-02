@@ -1,0 +1,148 @@
+footer.main-footer {
+  padding: 4rem 0;
+  background-color: $secondary;
+
+  .four .column {
+    @include mq("ipad") {
+      width: 50% !important;
+    }
+  }
+
+  .content {
+    @include mq("tablet") {
+      & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    h4 {
+      font-size: 3.5rem;
+      color: $white;
+      padding: 2rem 0;
+    }
+
+    &-text {
+      font-size: 2.2rem;
+      color: $white;
+      line-height: 1.5; 
+    }
+
+    .img-box {
+      img {
+        width: 10rem;
+      }
+    }
+
+    .sellect-lang {
+      width: 12rem;
+      height: 5rem;
+      font-size: 2.4rem;
+      text-transform: capitalize;
+      color: $white;
+      border: none;
+      padding: 0;
+      margin-top: 1.5rem;
+
+      @include mq("tablet") {
+        margin: 1.5rem auto;
+      }
+
+      option {
+        font-size: 2rem;
+        color: $primary;
+      }
+    }
+
+    ul.list {
+      .item,
+      .link {
+        font-size: 2.4rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $white;
+        line-height: 2;
+      }
+      .item {
+      }
+      .link {
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          text-decoration: 0.3rem underline;
+        }
+
+        &.underline {
+          text-decoration: 0.3rem underline;
+        }
+      }
+    }
+
+    .phone-number {
+      direction: ltr;
+      a {
+        font-size: 2.4rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #fff;
+      }
+    }
+    .phone-number::before {
+      content: "+";
+      font-size: 3.5rem;
+      color: #fff;
+      padding: 0 3px;
+    }
+  }
+  // COPYRIGHT
+  .copyright {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding-top: 5rem;
+    .container {
+      @extend %flexBetween;
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 3rem;
+
+      @include mq("ipad") {
+        flex-direction: column;
+      }
+    }
+    .social {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      margin: -2rem;
+      &-link {
+        display: inline-block;
+        font-size: 3rem;
+        line-height: 3rem;
+        color: $white;
+        padding: 1rem;
+        margin: 1rem;
+        border: 2px solid $white;
+        border-radius: 50%;
+      }
+    }
+
+    .text {
+      font-size: 2.8rem;
+      color: $white;
+    }
+  }
+}
+
+footer.main-footer .content .img-box-brand{
+  @include mq("tablet") {
+    // display: none !important; 
+    margin-bottom: 20px;
+    & ~ h4.heading-4{
+      display: none !important; 
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.slick-initialized .slick-slide{
+    outline: none;
+}
+
+.slick-list{ 
+    body.rtl &{
+    direction: ltr;
+        .slick-slide{
+            direction: rtl;
+        }
+    }
+}

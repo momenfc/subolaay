@@ -1,0 +1,243 @@
+header.main-header {
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.main-nav {
+  background-color: #ffe8ba;
+  position: sticky;
+  top: 0;
+  z-index: 555;
+  &-content {
+    @extend %flexBetween;
+    margin: -1.5rem;
+    padding: 3rem 0;
+
+    @include mq("phablet") {
+      flex-wrap: wrap;
+    }
+
+    & > * {
+      margin: 1.5rem;
+    }
+  }
+
+  // @include mq("phablet") {
+  //   position: sticky;
+  //   top: 0;
+  //   z-index: 555;
+  // }
+
+  //   BRAND LOGO
+  .brand-box {
+    height: 100%;
+    @extend %flexCenter;
+
+    @include mq("tablet-wide") {
+      margin-left: auto;
+
+      &:lang(en) {
+        margin: 1.5rem;
+        margin-right: auto;
+      }
+    }
+
+    img {
+      display: inline-block;
+      width: 10.9rem;
+      height: 5.2rem;
+    }
+  }
+  //   NAVBAR
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5rem;
+    flex: 1;
+
+    @include mq("tablet-wide") {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 2rem;
+      position: fixed;
+      margin: 0;
+      top: 9rem;
+      left: 0;
+      bottom: 0;
+      width: 60%;
+      z-index: 1000;
+      background-color: rgba($white, 0.98);
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in-out;
+
+      &:lang(en) {
+        left: unset;
+        right: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    @include mq("phablet") {
+      width: 100%;
+      align-items: center;
+    }
+
+    &-item {
+      margin: 1.5rem;
+      white-space: nowrap;
+    }
+
+    &-link {
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-transform: capitalize;
+      color: $primary;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #ffab00;
+      }
+    }
+  }
+  //   SHOW NAVBAR
+  .show-navbar {
+    transform: translateX(0);
+
+    &:lang(en) {
+      transform: translateX(0);
+    }
+  }
+
+  .toggle-nav-btn {
+    font-size: 3rem;
+    line-height: 2.8rem;
+    @extend %flexCenter;
+    display: none;
+
+    @include mq("tablet-wide") {
+      display: inline-block;
+    }
+  }
+
+  //   SIGN UP
+  .sign-up {
+    margin: 0;
+    @extend %flexCenter;
+
+    @include mq("phablet") {
+      flex: 1 0 100%;
+      order: 2;
+    }
+
+    a {
+      color: $white;
+      width: 14rem;
+      padding: 1.8rem 0;
+    }
+
+    .join-merchant-btn {
+      background-color: $primary;
+      margin: 0.6rem;
+    }
+    .sign-in-btn {
+      margin: 0.6rem;
+    }
+  }
+
+  //   LANGUAGE
+  .lang-btn {
+    width: 5rem;
+    height: 5rem;
+    min-width: 5rem;
+    min-height: 5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    border: 1px solid $secondary;
+    color: $secondary;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 0rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+}
+
+// WRAPPER
+.main-wrapper {
+  padding-top: 8rem;
+  background-color: $third-color;
+  position: relative;
+  overflow: hidden;
+
+  &-title {
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+    @extend %flexColumn;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    p {
+      padding: 1.5rem 1rem 3rem;
+      text-align: center;
+    }
+
+    // BUTTON DOWNLOAD APP
+    .button--mimas {
+      text-transform: capitalize;
+      overflow: hidden;
+      color: $white;
+      background-color: $primary;
+      position: relative;
+      width: 40rem;
+      height: 9.5rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      border-radius: 3rem;
+      text-decoration: none !important;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 120%;
+        background: $secondary;
+        position: absolute;
+        top: 0;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+      &:hover::before {
+        transform: translate3d(100%, 0, 0);
+      }
+      & span {
+        position: relative;
+      }
+    }
+  }
+
+  &-img-box {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

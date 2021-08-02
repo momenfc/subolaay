@@ -1,0 +1,30 @@
+.main-join-us-content {
+  .radio-box {
+    label {
+      font-size: 1.7rem;
+      @include mq("tablet") {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .headquarters-box {
+    position: relative;
+    input::placeholder {
+      font-size: 1.8rem;
+    }
+
+    img {
+      width: 3.2rem;
+      height: 3.2rem;
+      position: absolute;
+      top: 57%;
+      left: 2rem;
+
+      &:lang(en) {
+        left: unset;
+        right: 2rem;
+      }
+    }
+  }
+}

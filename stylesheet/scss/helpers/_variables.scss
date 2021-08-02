@@ -1,0 +1,56 @@
+//************************** COLORS **************************//
+
+//primary color
+// $primary:#0056b8;
+$primary: #1c1f2c;
+$secondary: #fdb934;
+$third-color: #fff3db;
+
+/*other colors*/
+$white: #fff;
+$black: #111;
+$gray: #f9f9f9;
+$validation: #eb3434;
+
+// start range slider var
+$slider-line-height: 20px !default;
+$slider-border-radius: 4px !default;
+
+//************************** FONTS **************************//
+
+//  Almarai fonts
+@font-face {
+  font-family: Almarai;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Almarai Light"), local("Almarai-Light"),
+    url("../fonts/Almarai/ArbFONTS-Almarai-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Almarai;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Almarai Regular"), local("Almarai-Regular"),
+    url("../fonts/Almarai/ArbFONTS-Almarai-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Almarai;
+  font-style: normal;
+  font-weight: bold;
+  src: local("Almarai Regular"), local("Almarai-Regular"),
+    url("../fonts/Almarai/ArbFONTS-Almarai-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Almarai;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Almarai bolder"), local("Almarai-bolder"),
+    url("../fonts/Almarai/ArbFONTS-Almarai-ExtraBold.ttf");
+  font-display: swap;
+}

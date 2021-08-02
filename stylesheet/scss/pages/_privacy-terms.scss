@@ -1,0 +1,92 @@
+.secondary-nav {
+  background: rgb(204, 195, 179);
+  background: linear-gradient(191deg, #aac09ad9 -10%, #fff3db 50%);
+  border-radius: 0 0 20% 20%;
+  overflow: hidden;
+  margin-bottom: -2rem;
+  position: relative;
+
+  .navbar-link {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+:target span {
+  position: relative;
+  color: $secondary;
+
+  &::after {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $secondary;
+    border-radius: 50%;
+    position: absolute;
+    top: 120%;
+    left: 47%;
+
+    @include mq("tablet-wide") {
+      top: 35%;
+      left: 103%;
+    }
+  }
+
+  &:lang(en)::after {
+    @include mq("tablet-wide") {
+      top: 35%;
+      left: -13%;
+    }
+  }
+}
+
+.main-secondary {
+  min-height: 100vh;
+  background: rgb(177, 200, 175);
+  background: linear-gradient(
+    196deg,
+    rgba(177, 200, 175, 0.9976365546218487) 0%,
+    rgba(255, 255, 255, 1) 12%
+  );
+  padding: 8rem 0;
+}
+
+.main-head {
+  h2 {
+  }
+  p {
+    font-size: 4rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.basic {
+  margin: 2rem 0;
+  .container {
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: $third-color;
+
+    h5 {
+      color: $secondary;
+    }
+
+    span {
+      font-size: 5rem;
+      font-weight: 900;
+      color: $secondary;
+      text-shadow: 2px 2px 0 rgb(255, 255, 255), 3px 3px 0 #b7b7b7;
+    }
+  }
+
+  &-content {
+    padding: 2rem 0;
+    p {
+      line-height: 1.33;
+    }
+  }
+}
